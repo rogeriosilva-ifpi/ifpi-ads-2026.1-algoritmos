@@ -1,0 +1,46 @@
+<script>
+
+function main(){
+  const nome = prompt('Qual seu nome? ')
+  const ano_nascimento = prompt('Qual seu ano de nascimento? ')
+  const sexo = prompt('Qual sexo (M ou F)? ')
+
+  idade = 2026 - ano_nascimento
+
+  fase_da_vida = calcular_fase(idade)
+
+  alert(`Olá ${nome}! Você já é ${fase_da_vida}`)
+
+  if (idade >= 18){
+    alert(`Em 2026 você terá ${idade} anos.`)
+  }
+
+  if (vai_para_guerra(idade, sexo)){
+    alert(`Olá ${nome} você defenderá nosso país!`)
+  }else{
+    alert(`Sinto muito. Você não vai nos salvar!`)
+  }
+
+
+}
+
+function calcular_fase(idade){
+  // Estrutura condicional encadeada
+  if (idade < 13){
+    return 'Criança ou BB'
+  }else if (idade < 18){
+    return 'Adolescente'
+  }else if (idade < 60){
+    return 'Adulto'
+  }else{
+    return 'Idoso'
+  }
+}
+
+function vai_para_guerra(idade, sexo){
+  return idade >= 18 && sexo === 'M'
+}
+
+main()
+
+</script>
