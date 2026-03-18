@@ -5,7 +5,9 @@ def main():
 
   for valor in range(inferior, superior+1):
     if valor % n == 0:
-      print(valor)
+      print(valor, end=' ')
+    else:
+      print('*', end=' ')
 
 
 main()
