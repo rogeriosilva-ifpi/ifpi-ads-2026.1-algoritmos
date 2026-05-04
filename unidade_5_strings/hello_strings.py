@@ -28,7 +28,7 @@ def eh_letra_minuscula(caractere):
 
 
 def eh_vogal(caractere):
-  vogais = 'aeiouAEIOU'
+  vogais = 'aeiouAEIOUÁÂÃ'
   for vogal in vogais:
     if caractere == vogal:
       return True
