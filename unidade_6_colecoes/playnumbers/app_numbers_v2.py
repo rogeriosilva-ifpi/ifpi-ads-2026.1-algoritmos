@@ -17,6 +17,10 @@ def main():
     7 - Even numbers (filter)
     8 - Prime numbers (filter)
     9 - Negative numbers (filter)
+    10 - Odd numbers (filter)
+    11 - Powered by 2 (map)
+    12 - Halfred (map)
+    13 - Half of Even numbers (filter/map)
 
     0 - Exit >>> '''
 
@@ -58,16 +62,30 @@ def main():
             print(f'> {count} numbers "{number}" removed!')
             success()
         elif opcao == 7:
-            even_numbers = filter_evens(numbers)
+            even_numbers = filter(numbers, is_even)
             list_numbers(even_numbers)
             success()
         elif opcao == 8:
-            prime_numbers = filter_primes(numbers)
+            prime_numbers = filter(numbers, is_prime)
             list_numbers(prime_numbers)
             success()
         elif opcao == 9:
-            negative_numbers = filter_negatives(numbers)
+            negative_numbers = filter(numbers, is_negative)
             list_numbers(negative_numbers)
+            success()
+        elif opcao == 10:
+            list_numbers(filter(numbers, is_odd))
+            success()
+        elif opcao == 11:
+            # powered = powered_by_2(numbers)
+            list_numbers(map(numbers, pow_by_2))
+            success()
+        elif opcao == 12:
+            # halfereds = halfered(numbers)
+            list_numbers(map(numbers, half_value))
+            success()
+        elif opcao == 13:
+            list_numbers(map(filter(numbers, is_even), half_value))
             success()
 
 
@@ -150,32 +168,20 @@ def save_numbers(numbers):
     print('Chiao!')
 
 
-# Filters
-def filter_evens(numbers):
-    filtereds = []
-    for number in numbers:
-        if number % 2 == 0:
-            filtereds.append(number)
-    
-    return filtereds
+# Criterion Functions
+def is_even(number):
+    return number % 2 == 0
+
+def pow_by_2(number):
+    return number**2
 
 
-def filter_negatives(numbers):
-    filtereds = []
-    for number in numbers:
-        if number < 0:
-            filtereds.append(number)
-    
-    return filtereds
+def is_odd(number):
+    return not is_even(number)
 
 
-def filter_primes(numbers):
-    filtereds = []
-    for number in numbers:
-        if is_prime(number):
-            filtereds.append(number)
-    
-    return filtereds
+def is_negative(number):
+    return number < 0
 
 
 def is_prime(number):
@@ -187,6 +193,53 @@ def is_prime(number):
             return False
     
     return True
+
+
+# Filters
+def filter(collection, fn_criterion):
+    filtereds = []
+    for item in collection:
+        if fn_criterion(item):
+            filtereds.append(item)
+    
+    return filtereds
+
+# Tranform function
+def half_value(value):
+    return value/2
+
+# Maps
+def map(collection, fn_transformation):
+    new_collection = []
+    for item in collection:
+        new_item = fn_transformation(item)
+        new_collection.append(new_item)
+
+    return new_collection
+
+
+def powered_by_2(numbers):
+    new_list = []
+    for number in numbers:
+        new_number = number**2
+        new_list.append(new_number)
+
+    return new_list
+
+
+def halfered(numbers):
+    new_list = []
+    for number in numbers:
+        new_number = number/2
+        new_list.append(new_number)
+
+    return new_list
+
+
+
+
+
+
 
 
 
