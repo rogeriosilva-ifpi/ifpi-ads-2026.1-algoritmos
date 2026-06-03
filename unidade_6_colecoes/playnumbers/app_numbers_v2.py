@@ -21,6 +21,11 @@ def main():
     11 - Powered by 2 (map)
     12 - Halfred (map)
     13 - Half of Even numbers (filter/map)
+    14 - Sum of All (reduce)
+    15 - Sum of Odd numbers (filter/reduce)
+    16 - Sum of Double of Even numbers (map/filter/reduce)
+    17 - The largest odd number (filter/reduce)
+    18 - The largest number of all (reduce)
 
     0 - Exit >>> '''
 
@@ -70,7 +75,8 @@ def main():
             list_numbers(prime_numbers)
             success()
         elif opcao == 9:
-            negative_numbers = filter(numbers, is_negative)
+            # negative_numbers = filter(numbers, is_negative)
+            negative_numbers = filter(numbers, lambda n:n < 0)
             list_numbers(negative_numbers)
             success()
         elif opcao == 10:
@@ -78,7 +84,8 @@ def main():
             success()
         elif opcao == 11:
             # powered = powered_by_2(numbers)
-            list_numbers(map(numbers, pow_by_2))
+            # list_numbers(map(numbers, pow_by_2))
+            list_numbers(map(numbers, lambda r:r**2))
             success()
         elif opcao == 12:
             # halfereds = halfered(numbers)
@@ -87,6 +94,26 @@ def main():
         elif opcao == 13:
             list_numbers(map(filter(numbers, is_even), half_value))
             success()
+        elif opcao == 14:
+            sum_of_all = reduce_sum(numbers)
+            print(f'Sum of all numbers --> {sum_of_all}')
+        elif opcao == 15:
+            result = reduce_sum(filter(numbers, is_odd))
+            print(f'Sum of all odd numbers --> {result}')
+        elif opcao == 16:
+            # result = reduce_sum(map(filter(numbers, is_even), double_value))
+
+            result = reduce(map(filter(numbers, is_even), lambda x:x*2), lambda acc, actual: acc + actual, 0)
+
+            print(f'Sum of double of even numbers --> {result}')
+        elif opcao == 17:
+            result = reduce_largest(filter(numbers, is_odd))
+            print(f'The largest odd number is {result}')
+        elif opcao == 18:
+            # result = reduce(numbers, largest, numbers[0])
+            result = reduce(numbers, lambda acc, actual: actual if actual >= acc else acc, numbers[0])
+
+            print(f'The largest number is {result}')
 
 
         input('Enter to continue...')
@@ -96,6 +123,12 @@ def main():
     # save values
     save_numbers(numbers)
 
+
+def largest(value1, value2):
+    if value1 >= value2:
+        return value1
+    else:
+        return value2
 
 def clear_screen():
     os.system('clear')
@@ -208,6 +241,10 @@ def filter(collection, fn_criterion):
 def half_value(value):
     return value/2
 
+
+def double_value(value):
+    return value*2
+
 # Maps
 def map(collection, fn_transformation):
     new_collection = []
@@ -234,6 +271,35 @@ def halfered(numbers):
         new_list.append(new_number)
 
     return new_list
+
+
+# Reduce
+def reduce(collection, operation, initial_value):
+    acc = initial_value
+
+    for actual in collection:
+        acc = operation(acc, actual)
+
+    return acc
+
+
+def reduce_sum(numbers):
+    sum_all = 0
+    for number in numbers:
+        sum_all = sum_all + number
+    
+    return sum_all
+
+
+def reduce_largest(numbers):
+    largest = numbers[0]
+
+    for item in numbers:
+        if item > largest:
+            largest = item
+    
+    return largest
+
 
 
 

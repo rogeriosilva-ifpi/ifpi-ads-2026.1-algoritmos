@@ -1,0 +1,149 @@
+================================================================================
+LOG DE CORREÇÃO — API-SC 01 — Algoritmos e Programação (ADS I / 2026)
+Data de geração: 2026-05-20
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. SUBMISSÕES SEM CORRESPONDÊNCIA NA LISTA OFICIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+As seguintes pastas foram encontradas no diretório de submissões mas NÃO
+correspondem a nenhum aluno da lista oficial (ads_normal.xls / ads_especial.xls):
+
+  a) Pasta: "Murilo Augusto"
+     Arquivos: q1_divisores.py, q3_combustivel.py, q4_turma.py, q7_senha.py
+     Observação: Nome "Murilo Augusto" não consta em nenhuma das planilhas.
+     Ação: Submissão mantida no diretório mas NÃO incluída no gabarito CSV.
+     Nota para o professor: verificar se há matrícula associada a este aluno.
+
+  b) Pasta: "nicollealmeidadeoliveira"
+     Arquivos: q1–q7, q9, utils.py (submissão bastante completa e bem organizada)
+     Observação: Nome "Nicolle Almeida de Oliveira" (inferido) não consta nas
+     planilhas. Submissão de qualidade acima da média da turma.
+     Ação: Não incluída no CSV. Professor deve confirmar matrícula.
+
+  c) Pasta: "PROVA 1_Sérgio Sousa"
+     Arquivos: q1–q8 (submissão muito completa e de alta qualidade, Q8 com menu
+     funcional, Q7 correta)
+     Observação: Nome "Sérgio Sousa" não consta nas planilhas. Possível matrícula
+     especial, aluno ouvinte ou erro no nome da pasta.
+     Ação: Não incluída no CSV. Professor deve verificar.
+
+  d) Pasta: "Resolucao"
+     Arquivos: q1–q7, utils.py
+     Observação: Esta pasta parece ser o gabarito de referência do professor,
+     não uma submissão de aluno. Ignorada na correção.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. ALUNOS DA LISTA OFICIAL SEM SUBMISSÃO ENCONTRADA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Os alunos abaixo constam na lista oficial com situação "Cursando" mas nenhuma
+pasta ou arquivo correspondente foi localizado no diretório de submissões:
+
+  - 2026111TADS0010  Ariel Francisco Araujo da Silva
+  - 2025111TADS0030  Iago Keven Sampaio Guedes
+  - 2026111TADS0034  Jose Francisco Oliveira da Silva
+  - 2026111TADS0040  Joao Nilo Dias Junior
+  - 2026111TADS0006  João Paulo da Silva Costa Sousa
+  - 2026111TADS0019  João Victor da Silva Rodrigues
+  - 2026111TADS0004  Kaio Costa Moura
+  - 2026111TADS0047  Maria Vitória Alves Fernandes
+  - 2026111TADS0012  Nelson Cardoso Coelho Soares
+  - 2026111TADS0013  Rhuan Carlos Freire das Neves
+  - 2026111TADS0042  Sarah Luyse Gomes da Silva
+  - 2025211TADS0004  Stanio Francisco Neves da Costa
+  - 2026111TADS0027  Vinicius Aguiar Borges
+
+Alunos com situação "Cancelado" (ausência esperada, nota = 0):
+  - 2026111TADS0018  Andre Tupimambá Rodrigues Olimpio de Melo
+  - 2026111TADS0030  Emily Vaz dos Santos
+  - 2026111TADS0005  Eva Kaillany Alves de Sousa
+  - 2026111TADS0025  Franco Werlanes da Silva Alves Segundo
+  - 2026111TADS0023  Jônatas Orlanda Araújo
+  - 2026111TADS0007  Lucas Miranda de Albuquerque Maranhão
+  - 2026111TADS0016  Luyla Amorim de Sousa
+  - 2026111TADS0038  Maria Eduarda Djesus Silva
+  - 2026111TADS0008  Ryann Luiz Sampaio Silva
+  - 2026111TADS0031  Samuel Vinicius Reis Lopes
+  - 2026111TADS0014  Sarah Juliany Viana Paz
+  - 2026111TADS0041  Yasmim Kelly de Sousa Gomes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. ASSOCIAÇÕES INCERTAS OU COM RESSALVAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  - "Ravenna" → Ravena da Silva Melo (2026111TADS0003): nome com grafia diferente
+    (duplo "n"), associação feita por semelhança fonética. Confirmado.
+
+  - "prova_pierre" → Sophie Gomes Bezerra (Pierre) (2026111TADS0020): nome social
+    "Pierre" consta entre parênteses na planilha. Associação clara.
+
+  - "api lya raquel" → Lya Raquel Rodrigues de Sousa (2025111TADS0019): confirmado.
+
+  - "API NATANAEL" → Natanael de Lima Sousa (2026111TADS0009): arquivos nomeados
+    q_01.py, q_02.py, q_04.py, q_06.py (sem underscore antes do número).
+    Mapeados como Q1, Q2, Q4, Q6 respectivamente.
+
+  - "API 2026 BRUNNO SAMPAIO" → Brunno Sampaio de Araujo Soares (2026111TADS0017):
+    arquivo "n = 12.py" interpretado como tentativa de Q1 (divisores, mas com
+    n=30 hardcoded); "Q2_intervalo.py" interpretado como Q2.
+
+  - "api 1 _ Pedro Gabriel" → Pedro Gabriel Sambraz Soares (2026111TADS0002):
+    subpasta "Aluno_ Pedro Gabriel Sambraz Soares" não contém arquivos .py
+    adicionais além dos da pasta principal.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. DECISÕES DE INTERPRETAÇÃO QUE AFETARAM NOTAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [Q6 — Padrão range()] Vários alunos usaram for i in range(a, n_termos+1, r),
+  onde n_termos é o número máximo de termos mas foi usado como LIMITE SUPERIOR
+  do range em vez de CONTAGEM. Isso gera uma PA incorreta para a maioria dos
+  casos (ex: a=2, r=3, n=5 → range(2,6,3) = [2,5] em vez de [2,5,8,11,14]).
+  Penalização: redução de ~20% em Dim1 para quem apresentou apenas este erro.
+  Afeta: Alisson, Breno, João Gabriel, João Henrique, João Victor Frota,
+  Delwin (Q6 está correto — usa lógica manual), Cauã.
+
+  [Q4 — menor_nota=0] Múltiplos alunos inicializaram menor_nota=0, o que faz
+  a variável nunca ser atualizada (notas são 0-10, portanto nenhuma nota
+  positiva é menor que 0). Penalização consistente: -15% em Dim1.
+  Afeta: Alisson, Delwin, João Henrique, Pablo.
+  Exceção favorável: Sophie/Pierre usou None (melhor prática), sem penalização.
+
+  [Ausência de main()] Penalização de 7% aplicada uniformemente por questão
+  em Dim3 (organização) para alunos que omitiram main() de forma consistente.
+  Afeta principalmente: Carlos Daniel (sem main() em nenhuma questão),
+  Brunno (sem main() em nenhuma questão).
+
+  [Recursos proibidos — grau de dependência] A penalização em Dim2 foi
+  proporcional ao quanto o aluno dependeu do recurso proibido para resolver
+  o problema:
+    - Uso de list/max/min apenas para exibição ou comparação auxiliar → -10%
+    - Uso de list comprehension como núcleo da solução → -20%
+    - Solução inteiramente baseada em recurso proibido → -25% (zera Dim2)
+  Consistência verificada: Daniel Alves recebeu penalização máxima em Q1, Q2,
+  Q4 e Q6; Arthur Farias recebeu penalização alta apenas em Q4.
+
+  [Ravena — pseudocódigo] Todos os arquivos de Ravena contêm apenas comentários
+  descrevendo o que o programa deveria fazer, sem nenhum código Python executável.
+  Classificados como "em_branco" (0%) em todas as questões. A presença dos arquivos
+  indica que a aluna tentou estruturar as ideias, mas sem código real.
+
+  [Eduardo Q7 — interpretação incorreta do enunciado] Eduardo gerou uma senha
+  aleatória em vez de validar uma senha digitada pelo usuário. Interpretação
+  completamente equivocada do enunciado. Nota 0%.
+
+  [Carlos Daniel Q5 — bug sutil] Após calcular as notas de R$5, o código usa
+  `centavos % 50` em vez de `centavos % 500`, causando erros em trocos que
+  envolvem tanto R$5 quanto valores menores. Por ser um erro pontual em código
+  caso contrário bem estruturado, penalização foi moderada (não abaixo de 65%).
+
+  [Guilherme Q10 — sintaxe Python inválida] Guilherme usou declarações de tipo
+  estilo C (`float dimensao_um = 0`) e outros padrões inválidos em Python. O
+  arquivo não pode ser interpretado. Classificado como tentativa real com
+  nota mínima (5%) dado o evidente esforço de estruturação.
+
+================================================================================
+FIM DO LOG
+================================================================================
